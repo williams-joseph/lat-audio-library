@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpeg" href="adminPic.jpeg">
+  <title>Dashboard - Admin</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+      color: white;
+    }
+  </style>
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  
+  <script>
+    // Replace with your Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyDkZaHzPGrbkW5Pzy4tT651_Gs2ZSWCCJw",
+      authDomain: "sermons-app-d004a.firebaseapp.com",
+      projectId: "sermons-app-d004a",
+      storageBucket: "sermons-app-d004a.firebasestorage.app",
+      messagingSenderId: "104319985691",
+      appId: "1:104319985691:web:87844858dca0f6954eb0be"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <div id="loading">
+   Welcome, Dashboard Loading...
+  </div>
+
+  <script>
+    window.addEventListener('load', function(ev) {
+      if (typeof _flutter !== "undefined") {
+        document.getElementById('loading').style.display = 'none';
+      } else {
+        setTimeout(function() {
+          const loading = document.getElementById('loading');
+          if (loading) loading.style.display = 'none';
+        }, 5000);
+      }
+    });
+
+    window.addEventListener("flutter-first-frame", function() {
+      const loading = document.getElementById('loading');
+      if (loading) loading.style.display = 'none';
+    });
+  </script>
+
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>

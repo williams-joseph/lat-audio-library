@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#667eea">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" href="musicLibLogo.png">
+  <title>LAT Audio Library</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/loading.css">
+
+  <!-- Firebase Configuration -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+</head>
+<body>
+  <!-- Simple Loading Screen -->
+  <div id="loading">
+    <div class="loading-container">
+      <div class="spinner"></div>
+      <p class="loading-text">Opening Audio Library...</p>
+    </div>
+  </div>
+
+  <!-- Flutter App Section -->
+  <section class="flutter-app">
+    <script src="main.dart.js" type="application/javascript"></script>
+  </section>
+
+  <!-- JavaScript -->
+  <script src="js/loading-manager.js"></script>
+</body>
+</html>
